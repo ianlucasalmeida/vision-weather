@@ -7,14 +7,14 @@ import { getFirestore } from "firebase/firestore";
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 
-// A configuração do seu app Firebase que você forneceu
+// A configuração agora é lida de forma segura a partir do arquivo .env
 const firebaseConfig = {
-  apiKey: "AIzaSyDFzI0m6VIJJCHTBU5qxfbJ7nXM55imQeA",
-  authDomain: "vision-clima.firebaseapp.com",
-  projectId: "vision-clima",
-  storageBucket: "vision-clima.appspot.com",
-  messagingSenderId: "503672370902",
-  appId: "1:503672370902:web:2a89d386121e736dcf7b77"
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID
 };
 
 // Inicializa o Firebase App

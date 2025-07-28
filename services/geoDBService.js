@@ -1,9 +1,8 @@
 // services/geoDBService.js
 import axios from 'axios';
 
-// --- COLOQUE AQUI SUA CHAVE CORRETA DA RAPIDAPI ---
-// O erro 403 indica que a chave abaixo está incorreta ou inativa.
-const GEO_API_KEY = 'fc243d5ca6mshb1c624312aaf1f5p197abbjsn0adda1f4a32f'; 
+// A chave agora é lida de forma segura a partir do arquivo .env
+const GEO_API_KEY = process.env.EXPO_PUBLIC_RAPIDAPI_API_KEY; 
 const GEO_API_HOST = 'wft-geo-db.p.rapidapi.com';
 const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
 
